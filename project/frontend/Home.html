@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <title>TCE Maps</title>
+    <link rel="icon" type="image/png" href="Logo.jpg">
+  </head>
+<script>
+ function design(x){
+  x.style.background="white";
+
+}
+function normal(x){
+    x.style.background="rgb(166, 177, 216)";
+}
+</script>
+<script src="Location.js"></script>
+<body>
+    <div id="back-img" style="background-image: url('https://img.collegepravesh.com/2022/05/TCE-Madurai.jpg'); position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover; opacity: 0.8;">
+    </div>
+    <div id="content" style="position: absolute; top: 0; left:0; width: 100%; height: 100vh; overflow-y: scroll;">
+    <br><br><br><br><br>
+<div id="main">
+<Center>
+    <div id="tce">Thiagarajar College of Engineering</div>
+    <br><br>
+    <img id="logo" src="Logo.jpg" height="100">
+    <h2 id="tceMaps">TCE MAPS</h2>
+</Center>
+<br><br><br>
+<Center>
+    <form action="Blueprint.png">
+        <button id="bprint">View Clg Blueprint</button>
+    </form>
+    <br><br><br>
+</Center>
+<Center>
+<form action="Labs.html"><button class="lab" onmouseover="design(this)" onmouseout="normal(this)">LABS</button></form>
+<form action="Classes.html"><button class="class" onmouseover="design(this)" onmouseout="normal(this)">CLASSES</button></form>
+<form action="Faculty.html"><button class="faculty" onmouseover="design(this)" onmouseout="normal(this)">FACULTY</button></form>
+<form action="Majorspots.html"><button class="others" onmouseover="design(this)" onmouseout="normal(this)">MAJOR SPOTS</button></form>
+<form action="Departments.html"><button class="dept" onmouseover="design(this)" onmouseout="normal(this)">DEPARTMENTS</button></form>
+<form action="Grounds.html"><button class="ground" onmouseover="design(this)" onmouseout="normal(this)">GROUNDS(SPORTS)</button></form>
+</Center>
+</body>
+<style>
+    
+    #tceMaps{
+        font-size:170%;
+        margin-top: -0.05%;
+        background-color: white;
+        width:200px;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    #main{
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    #tce{
+    margin-top: 4%;
+    font-size:200%;
+    font-variant: small-caps;
+    font-family:georgia;
+    background-color: white;
+    text-align: center;
+    width:800px;
+    }
+    .lab,.class,.others,.faculty,.dept,.ground{
+    
+        width: 300px;
+        font-size:150%;
+        font-variant: small-caps;
+        font-family:georgia;
+        border:2px solid;
+        border-color: black;
+        background-color:rgb(179, 190, 232);
+        border-radius:12px;
+        padding:10px;
+        margin: 10px;
+        text-align: center;
+    }
+    #bprint{
+        width:28%;
+        padding: 2%;
+    font-size:150%;
+    font-variant: small-caps;
+    font-family:georgia;
+    border-color:rgb(166, 177, 216);
+    
+    }
+    
+    
+</style>
+</html>

@@ -1,0 +1,278 @@
+[
+    {
+        "value": "IT-G",
+        "name": "Cloud System Lab"
+    },
+    {
+        "value": "IT-F",
+        "name": "Machine Learning Lab"
+    },
+    {
+        "value": "EEE-F",
+        "name": "Applied Electronics Lab"
+    },
+    {
+        "value": "EEE-F",
+        "name": "EEE Computer Lab"
+    },
+    {
+        "value": "EEE-G",
+        "name": "Control systems Laboratory"
+    },
+    {
+        "value": "EEE-G",
+        "name": "Electrical Machines Lab"
+    },
+    {
+        "value": "EEE-G",
+        "name": "Microprocessor / Microcontroller Lab"
+    },
+    {
+        "value": "IT-F",
+        "name": "Enterprise Mobility Lab(Motorolla)"
+    },
+    {
+        "value": "IT-S",
+        "name": "Data Analytics Lab"
+    },
+    {
+        "value": "CSE-",
+        "name": "Artificial Intelligence Lab"
+    },
+    {
+        "value": "CSE-F",
+        "name": "Knowledge Engineering Lab"
+    },
+    {
+        "value": "CSE-S",
+        "name": "Multicore Lab(Motorolla)"
+    },
+    {
+        "value": "CSE-",
+        "name": "Multimedia Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "Agilent Technologies Communication Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "Altera VLSI Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "National Instruments Electronic system design Laboratory"
+    },
+    {
+        "value": "ECE-F",
+        "name": "Free Scale/Intel Embedded Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "Image Processing Lab"
+    },
+    {
+        "value": "ECE-F",
+        "name": "MEMS Design centre"
+    },
+    {
+        "value": "Civil-",
+        "name": "Environmental Engineering and Environmental Research Lab"
+    },
+    {
+        "value": "Civil-G",
+        "name": "Hydraulic Lab"
+    },
+    {
+        "value": "Civil-G",
+        "name": "Soil and Roads Analytics Lab"
+    },
+    {
+        "value": "Civil-",
+        "name": "Infrastructure Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Centre for Automation-CAM and Mechatronics Lab"
+    },
+    {
+        "value": "Mech-F",
+        "name": "Computational Fluid Dynamics"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Fitting,carpentry,sheet Metal and Welding Shop"
+    },
+    {
+        "value": "Mech-",
+        "name": "Composite Material Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Heat Transfer Lab"
+    },
+    {
+        "value": "Mech-F",
+        "name": "Internal Combustion Engines Laboratory"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Instrumentation and Dynamics Laboratory"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Meterology Laboratory"
+    },
+    {
+        "value": "Mech-F",
+        "name": "Metallurgy and Composite Materials Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Nano Technology Laboratory"
+    },
+    {
+        "value": "IT-F",
+        "name": "Cyber Forensics Lab"
+    },
+    {
+        "value": "IT-G",
+        "name": "Smart Secure Environment Lab"
+    },
+    {
+        "value": "EEE-G",
+        "name": "Embedded Systems Lab"
+    },
+    {
+        "value": "EEE-",
+        "name": "Power Electronics Lab"
+    },
+    {
+        "value": "EEE-F",
+        "name": "Simens Automation Lab"
+    },
+    {
+        "value": "EEE-",
+        "name": "Project Lab"
+    },
+    {
+        "value": "EEE-",
+        "name": "TI C2000 Microcontroller Lab"
+    },
+    {
+        "value": "CSE-F",
+        "name": "Network Lab"
+    },
+    {
+        "value": "CSE-F",
+        "name": "Parallel processing Lab"
+    },
+    {
+        "value": "CSE-S",
+        "name": "Software Engineering Lab"
+    },
+    {
+        "value": "IT-F",
+        "name": "Cognitive Lab"
+    },
+    {
+        "value": "IT-G",
+        "name": "Data Science Lab"
+    },
+    {
+        "value": "IT-F",
+        "name": "Honywell IOT Development Lab"
+    },
+    {
+        "value": "IT-S",
+        "name": "Intelligent & Interactive Computer Lab"
+    },
+    {
+        "value": "IT-S",
+        "name": "Business Analytics Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "Microwave Lab"
+    },
+    {
+        "value": "ECE-F",
+        "name": "Computer Networking Lab"
+    },
+    {
+        "value": "ECE-F",
+        "name": "Remote Sensing Lab"
+    },
+    {
+        "value": "ECE-",
+        "name": "Sensor Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "RF System Lab"
+    },
+    {
+        "value": "ECE-G",
+        "name": "Signal Processing Lab"
+    },
+    {
+        "value": "Civil-F",
+        "name": "Civil Computer Lab"
+    },
+    {
+        "value": "Civil-G",
+        "name": "Survey Lab"
+    },
+    {
+        "value": "Civil-G",
+        "name": "Geopolymer Lab"
+    },
+    {
+        "value": "Civil-G",
+        "name": "Material Testing Lab"
+    },
+    {
+        "value": "Civil-G",
+        "name": "Structures Lab"
+    },
+    {
+        "value": "Mech-F",
+        "name": "Productios System support Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Steam Power Laboratory"
+    },
+    {
+        "value": "Mech-",
+        "name": "Vision Systems Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Product Developement Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Machineshop"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Refrideration and Air Conditioning Lab"
+    },
+    {
+        "value": "Mech-F",
+        "name": "TSS CAR-Product Build Lab"
+    },
+    {
+        "value": "Mech-F",
+        "name": "TSS CAR-Product Engineering Lab"
+    },
+    {
+        "value": "Mech-G",
+        "name": "Product reliability Testing Lab"
+    },
+    {
+        "value": "Mech-F",
+        "name": "Electric Vehicles Lab"
+    }
+]

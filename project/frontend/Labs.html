@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TCE Maps</title>
+        <link rel="icon" type="image/png" href="Logo.jpg">
+    </head>
+    <body >
+         
+    <div id="back-img" style="background-image: url('https://img.collegepravesh.com/2022/05/TCE-Madurai.jpg'); position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover; opacity: 0.8;">
+    </div>
+    <div id="content" style="position: absolute; top: 0; left:0; width: 100%; height: 100vh; overflow-y: scroll;">
+        <Center>
+        <br><br>
+        <p id="tce">Thiagarajar College of Engineering</p>
+        <a href="Home.html"><img id="logo" src="Logo.jpg" height="100"></a>       
+        <h2 id="tceMaps">TCE MAPS</h2>
+        
+        <form>
+            <input type="text" name="" id="searchdest" placeholder="Search Destination" onkeyup="search()">
+        </form>
+        <br><br><br>
+        </Center>
+
+        <form action="Router.html">
+            <div class="main">
+
+                <div class="left">
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-G" onclick="load(value)">Cloud System Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-F" onclick="load(value)">Machine Learning Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-F" onclick="load(value)">Applied Electronics Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-F" onclick="load(value)">EEE Computer Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-G" onclick="load(value)">Control systems Laboratory</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-G" onclick="load(value)">Electrical Machines Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-G" onclick="load(value)">Microprocessor / Microcontroller Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-F" onclick="load(value)">Enterprise Mobility Lab(Motorolla)</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-S" onclick="load(value)">Data Analytics Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-" onclick="load(value)">Artificial Intelligence Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-F" onclick="load(value)">Knowledge Engineering Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-S" onclick="load(value)">Multicore Lab(Motorolla)</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-" onclick="load(value)">Multimedia Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">Agilent Technologies Communication Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">Altera VLSI Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">National Instruments Electronic system design Laboratory</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-F" onclick="load(value)">Free Scale/Intel Embedded Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">Image Processing Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-F" onclick="load(value)">MEMS Design centre</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-" onclick="load(value)">Environmental Engineering and Environmental Research Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-G" onclick="load(value)">Hydraulic Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-G" onclick="load(value)">Soil and Roads Analytics Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-" onclick="load(value)">Infrastructure Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Centre for Automation-CAM and Mechatronics Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">Computational Fluid Dynamics</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Fitting,carpentry,sheet Metal and Welding Shop</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-" onclick="load(value)">Composite Material Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Heat Transfer Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">Internal Combustion Engines Laboratory</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Instrumentation and Dynamics Laboratory</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Meterology Laboratory</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">Metallurgy and Composite Materials Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Nano Technology Laboratory</button><br>              
+                
+                </div>
+                <div class="right">
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-F" onclick="load(value)">Cyber Forensics Lab</button></p>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-G" onclick="load(value)">Smart Secure Environment Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-G" onclick="load(value)">Embedded Systems Lab</button></p>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-" onclick="load(value)">Power Electronics Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-F" onclick="load(value)">Simens Automation Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-" onclick="load(value)">Project Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-" onclick="load(value)">TI C2000 Microcontroller Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-F" onclick="load(value)">Network Lab</button></p>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-F" onclick="load(value)">Parallel processing Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-S" onclick="load(value)">Software Engineering Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-F" onclick="load(value)">Cognitive Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-G" onclick="load(value)">Data Science Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-F" onclick="load(value)">Honywell IOT Development Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-S" onclick="load(value)">Intelligent & Interactive Computer Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-S" onclick="load(value)">Business Analytics Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">Microwave Lab</button></p>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-F" onclick="load(value)">Computer Networking Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-F" onclick="load(value)">Remote Sensing Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-" onclick="load(value)">Sensor Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">RF System Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-G" onclick="load(value)">Signal Processing Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-F" onclick="load(value)">Civil Computer Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-G" onclick="load(value)">Survey Lab</button></p>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-G" onclick="load(value)">Geopolymer Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-G" onclick="load(value)">Material Testing Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-G" onclick="load(value)">Structures Lab</button><br>  
+			        <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">Productios System support Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Steam Power Laboratory</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-" onclick="load(value)">Vision Systems Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Product Developement Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Machineshop</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Refrideration and Air Conditioning Lab</button><br>
+                    <button id="lab" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">TSS CAR-Product Build Lab</button></p>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">TSS CAR-Product Engineering Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-G" onclick="load(value)">Product reliability Testing Lab</button><br>
+                    <button id="lab"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-F" onclick="load(value)">Electric Vehicles Lab</button><br>                            
+                </div>
+            </div>
+        </form>
+        <br><br>
+        <Center>
+            <div class="buttons">
+                <button id="back" onclick="history.back()"><<</button>
+               <button id="forward" onclick="history.forward()">>></button>
+            </div>
+        </Center>
+        <script>
+            function design(x){
+                x.style.background="white";
+            }
+            function normal(x){
+                x.style.background="rgb(166, 177, 216)";
+            }
+            function load(value){
+                localStorage.setItem("loc",value)
+            }
+        </script>
+        <script>
+            function search(){
+            const searchbox=document.getElementById("searchdest").value.toUpperCase();
+            const desti = document.getElementById("destlist");
+            const dname=document.getElementsByClassName("dest");
+            
+            for(var i=0;i<dname.length;i++){
+                let match=dname[i];
+                if(match){
+                    let text = match.textContent || match.innerHTML
+                    if(text.toUpperCase().indexOf(searchbox) > -1){
+                        dname[i].style.display = "";
+                    }else{
+                        dname[i].style.display ="none" ;
+                    }
+                }
+            }
+        }
+
+        
+        </script>
+
+
+    </body>
+    <style>
+        
+    #tce{
+    margin-top: 4%;
+    font-size:200%;
+    font-variant: small-caps;
+    font-family:georgia;
+    background-color: white;
+    width:max-content
+    }
+        body{
+            height: 100%;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .center{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #tceMaps{
+            font-size:170%;
+            background-color: white;
+            width:200px;        
+        }
+        .buttons{
+            display: contents;
+        }
+        #searchdest{
+            width:50%;
+            font-size:250%;
+            text-align:center;
+        }
+        
+        #lab{
+        width: 300px;
+        font-size:150%;
+        font-variant: small-caps;
+        font-family:georgia;
+        border:2px solid;
+        border-color: black;
+        background-color:rgb(166, 177, 216);
+        border-radius:12px;
+        padding:10px;
+        margin: 10px;
+        text-align: center;
+        }
+
+        #back,#forward{
+        font-size:25px;
+        border:2px solid;
+        border-radius:12px;
+        padding:10px;
+        text-align: center;
+        background-color:rgb(166, 177, 216);
+        border-color: black;
+        margin-left: 1%;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        
+    </style>
+
+</html>

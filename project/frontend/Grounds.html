@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TCE Maps</title>
+    <link rel="icon" type="image/png" href="Logo.jpg">
+</head>
+
+<body>
+    <div id="back-img" style="background-image: url('https://img.collegepravesh.com/2022/05/TCE-Madurai.jpg'); position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover; opacity: 0.8;">
+    </div>
+    <div id="content" style="position: absolute; top: 0; left:0; width: 100%; height: 100vh; overflow-y: scroll;">
+    
+
+    <Center>
+        <br><br>
+        <p id="tce">Thiagarajar College of Engineering</p>
+        <a href="Home.html"><img id="logo" src="Logo.jpg" height="100"></a>
+        <h2 id="tceMaps">TCE MAPS</h2>
+
+        <form>
+            <input type="text" name="" id="searchdest" placeholder="Search Destination" onkeyup="search()">
+        </form>
+        <br><br><br>
+    </Center>
+
+    <form action="Router.html">
+        <div class="main">
+            <div class="left">
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="PET"
+                    onclick="load(value)">Department of Physical Education</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Cricket"
+                    onclick="load(value)">TCE Cricket Ground</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Basketball"
+                    onclick="load(value)">Dodgers Basketball Court</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Tennis"
+                    onclick="load(value)">TCE Tennis Court</button><br>
+		        <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Hockey"
+                    onclick="load(value)">TCE Hockey Ground</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Football"
+                        onclick="load(value)">Trotters Football Court</button><br>
+
+            </div>
+            <div class="right">
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Indoor"
+                    onclick="load(value)">Indoor Stadium</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Handball"
+                    onclick="load(value)">Falconz Handball Court</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Badminton"
+                    onclick="load(value)">Smasherzz Badminton Court</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Ballbadminton" 
+                onclick="load(value)">Ball Badminton court</button><br>
+                <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Volleyball"
+                    onclick="load(value)">Spikers Volleyball court</button><br>
+		        <button id="ground" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Kho-Kho"
+                    onclick="load(value)">TCE Adonis Kho-Kho Ground</button><br>
+            </div>
+        </div>
+    </form>
+    <br><br>
+    <Center>
+        <div class="buttons">
+            <button id="back" onclick="history.back()">
+                <<
+                    <button id="forward" onclick="history.forward()">>></button>
+        </div>
+    </Center>
+    <script>
+        function design(x) {
+            x.style.background = "white";
+        }
+        function normal(x) {
+            x.style.background = "rgb(166, 177, 216)";
+        }
+        function load(value) {
+            localStorage.setItem("loc", value)
+        }
+    </script>
+    <script>
+        function search() {
+            const searchbox = document.getElementById("searchdest").value.toUpperCase();
+            const desti = document.getElementById("destlist");
+            const dname = document.getElementsByClassName("dest");
+
+            for (var i = 0; i < dname.length; i++) {
+                let match = dname[i];
+                if (match) {
+                    let text = match.textContent || match.innerHTML
+                    if (text.toUpperCase().indexOf(searchbox) > -1) {
+                        dname[i].style.display = "";
+                    } else {
+                        dname[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+    </script>
+
+
+</body>
+<style>
+    #tce{
+        margin-top: 4%;
+        font-size:200%;
+        font-variant: small-caps;
+        font-family:georgia;
+        background-color: white;
+        width:max-content
+    }
+    #tceMaps{
+            font-size:170%;
+            background-color: white;
+            width:200px;        
+        }
+
+    body {
+        height: 100%;
+    }
+
+    
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #tcerouter {
+        font-size: 170%;
+
+    }
+
+    .buttons {
+        display: contents;
+    }
+
+    #searchdest {
+        width: 50%;
+        font-size: 250%;
+        text-align: center;
+    }
+
+    #ground {
+        width: 300px;
+        font-size: 150%;
+        font-variant: small-caps;
+        font-family: georgia;
+        border: 2px solid;
+        border-color: black;
+        background-color: rgb(166, 177, 216);
+        border-radius: 12px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    #back,
+    #forward {
+        font-size: 25px;
+        border: 2px solid;
+        border-radius: 12px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgb(166, 177, 216);
+        border-color: black;
+        margin-left: 1%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+</style>
+
+</html>

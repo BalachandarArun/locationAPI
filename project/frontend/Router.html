@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <title>TCE Maps</title>
+    <link rel="icon" type="image/png" href="Logo.jpg">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  
+  <Center>
+    <br><br><br><br>
+    <p id="it">Thiagarajar College of Engineering</p>
+    <a href="Home.html"><img id="logo" src="Logo.jpg" height="100"></a>       
+    <h2 id="tceMaps">TCE MAPS</h2>
+    </Center>
+  <body>
+    <br>
+    <Center>
+      <div id="from-to-align">
+        <p>FROM :</p>
+      <p id="startdet"></p>
+      </div>
+      <div id="from-to-align">
+      <p>TO :</p>
+      <p id="detail"></p>
+      </div>
+    <p id="floor"></p>
+    <br>
+    <label id="label" for="currloc">Choose nearby Location :</label>
+    <select name="currloc" id="currloc">
+      <option value="Entrance">TCE Entrance</option>
+      <option value="Mainbuilding-">MainBuilding</option>
+      <option value="IT">IT Dept</option>
+      <option value="B halls">B halls</option>
+      <option value="FC">FoodCourt</option>
+      <option value="OpenAudi">OpenAuditoriam</option>
+      <option value="library">Library</option>
+      <option value="Boys hostel">Boys Hostel</option>
+      <option value="Girls hostel">Girls Hostel</option>
+      <option value="TCE Stores">TCE Stores</option>
+      <option value="EEE">EEE Dept</option>
+      <option value="Mech">Mech Dept</option>
+      <option value="Civil">Civil Dept</option>
+      <option value="Arch">Architecture Dept</option>
+      <option value="NSS cell">NSS Cell</option>
+      <option value="Placement">Placement cell</option>
+      <option value="backgate">Backgate</option>
+    </select>
+    <br><br><br>
+    <button id="track" onclick="track()">Track Location</button>
+    </Center>
+    <br><br><br><br>
+    <div id="map"></div>
+    <br /><br /><br><br>
+    <Center>
+      <div class="buttons">
+          <button id="back" onclick="history.back()"><<</button>
+         <button id="forward" onclick="history.forward()">>></button>
+      </div>
+  </Center>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD51OcSUK4f64fv3yoiVhaMECtf1L6gItU&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+  <script>
+    function track(){
+      startloc=document.getElementById("currloc").value;
+      if(startloc=="Entrance"){
+        plotroute(9.885688752462528, 78.0794788529645)
+        document.getElementById("startdet").innerHTML="TCE ENTRANCE"
+      }
+      else if(startloc=="IT"){
+        plotroute(9.882528344351497, 78.08357698497022)
+        document.getElementById("startdet").innerHTML="IT DEPARTMENT"
+      }
+      else if(startloc=="ECE"){
+        plotroute(9.882820678202691, 78.0823579355205)
+        document.getElementById("startdet").innerHTML="ECE DEPARTMENT"
+      }
+      else if(startloc=="CompApp"){
+        plotroute(9.882445157866545, 78.08386673513536)
+        document.getElementById("startdet").innerHTML="DEPARTMENT OF COMPUTER APPLICATION"
+      }
+      else if(startloc=="Chem"){
+        plotroute(9.881705575218652, 78.08311475659181)
+        document.getElementById("startdet").innerHTML="CHEMISTRY DEPARTMENT"
+      }
+      else if(startloc=="Maths"){
+        plotroute(9.88189759432116, 78.08315499624699)
+        document.getElementById("startdet").innerHTML="MATHEMATICS DEPARTMENT"
+      }
+      else if (startloc == "EEE") {
+        plotroute(9.882593755301468, 78.08178708984501)
+        document.getElementById("startdet").innerHTML="EEE DEPARTMENT"
+      }
+      else if (startloc == "MECT") {
+        plotroute(9.882083554030897, 78.08312975791166)
+        document.getElementById("startdet").innerHTML="MECT DEPARTMENT"
+      }
+      else if (startloc == "CSE") {
+        plotroute(9.88281834867522, 78.08373724696114)
+        document.getElementById("startdet").innerHTML="CSE DEPARTMENT"
+      }
+      else if (startloc == "Civil") {
+        plotroute(9.882296764244305, 78.0828936918579)
+        document.getElementById("startdet").innerHTML="CIVIL DEPARTMENT"
+      }
+      else if (startloc == "Arch") {
+        plotroute(9.880228386351208, 78.08282854700245)
+        document.getElementById("startdet").innerHTML="ARCH DEPARTMENT"
+      }
+      else if (startloc == "Mech") {
+        plotroute(9.882708611969615, 78.0811209551967)
+        document.getElementById("startdet").innerHTML="MECH DEPARTMENT"
+      }
+      else if(startloc=="Mainbuilding"){
+        plotroute(9.882894777636704, 78.08253491726217)
+        document.getElementById("startdet").innerHTML="MAIN BUILDING"
+      }
+      else if(startloc=="OpenAudi"){
+        plotroute(9.882814461436746, 78.08222451807406)
+        document.getElementById("startdet").innerHTML="OPEN AUDITORIAM"
+      }
+      else if(startloc=="KS"){
+        plotroute(9.882889223073565, 78.08212111591777)
+        document.getElementById("startdet").innerHTML="KS AUDITORIAM"
+      }
+      else if(startloc=="Bank"){
+        plotroute(9.883528057671628, 78.07983569816285)
+        document.getElementById("startdet").innerHTML="ICICI BANK"
+      }
+      else if (startloc == "FC") {
+        plotroute(9.883339542220776, 78.08324530594983)
+        document.getElementById("startdet").innerHTML="FOOD COURT"
+      }
+      else if (startloc == "TCE Stores") {
+        plotroute(9.88322862546142, 78.07992536548095)
+        document.getElementById("startdet").innerHTML="TCE STORES"
+      }
+      else if (startloc == "library") {
+        plotroute(9.88303361697175, 78.08133501556914)
+        document.getElementById("startdet").innerHTML="LIBRARY"
+      }
+      else if (startloc == "NSS cell") {
+        plotroute(9.88325557896444, 78.0794936791081)
+        document.getElementById("startdet").innerHTML="NSS CELL"
+      }
+      else if (startloc == "Main ground") {
+        plotroute(9.883922408731436, 78.08157203028395)
+        document.getElementById("startdet").innerHTML="MAIN GROUND"
+      }
+      else if (startloc == "B halls") {
+        plotroute(9.881952851786568, 78.08277353927916)
+        document.getElementById("startdet").innerHTML="B HALLS"
+      }
+      else if (startloc == "Boys hostel") {
+        plotroute(9.885633979989626, 78.07946651296366)
+        document.getElementById("startdet").innerHTML="BOYS HOSTEL"
+      }
+      else if (startloc == "Girls hostel") {
+        plotroute(9.878946490642353, 78.08263377805396)
+        document.getElementById("startdet").innerHTML="GIRLS HOSTEL"
+      }
+      else if(startloc=="Placement")
+      {
+        plotroute(9.885079408704803, 78.08095350792127)
+        document.getElementById("startdet").innerHTML="PLACEMENT CELL"
+      }
+      else if(startloc=="backgate")
+      {
+        plotroute(9.881355679492097, 78.08327061903425)
+        document.getElementById("startdet").innerHTML="BACKGATE"
+      }
+      else if(startloc=="PET")
+      {
+        plotroute(9.883839467003526, 78.08088990300787)
+        document.getElementById("startdet").innerHTML="PHYSICAL EDUCATION DEPARTMENT"
+      }
+      
+    }
+    function plotroute(startlat,startlng){
+        var map;
+        var start = new google.maps.LatLng(startlat,startlng);
+        var end = new google.maps.LatLng(latlng["lat"],latlng["lng"]);
+        var option ={
+            zoom : 10,
+            center : start 
+        };
+        map = new google.maps.Map(document.getElementById('map'),option);
+        var display = new google.maps.DirectionsRenderer();
+        var services = new google.maps.DirectionsService();
+        display.setMap(map);
+            var request ={
+                origin : start,
+                destination:end,
+                travelMode: 'DRIVING'
+            };
+            services.route(request,function(result,status){
+                if(status =='OK'){
+                    display.setDirections(result);
+                }
+            });
+    }
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom:10,
+        center: { lat:9.8,lng:78.9},
+      });
+      const geocoder = new google.maps.Geocoder();
+      const infowindow = new google.maps.InfoWindow();
+
+      geocodeLatLng(geocoder, map, infowindow);
+    }
+
+    function geocodeLatLng(geocoder, map, infowindow) {
+      function latlong(latitude,longitude){
+        latlng = {
+          lat: latitude,
+          lng: longitude,
+        };
+      }
+      var dest=localStorage.getItem("loc");
+      var darray=dest.split("-");
+      if(darray[1]=="G")
+        document.getElementById("floor").innerHTML="GROUND FLOOR"
+      else if(darray[1]=="F")
+        document.getElementById("floor").innerHTML="FIRST FLOOR"
+      else if(darray[1]=="S")
+        document.getElementById("floor").innerHTML="SECOND FLOOR"
+      if(darray[0]=="IT"){
+        latlong(9.882528344351497, 78.08357698497022)
+        document.getElementById("detail").innerHTML="IT DEPARTMENT"
+      }
+      else if(dest=="CSBS"){
+        latlong(9.882528344351497, 78.08357698497022)
+        document.getElementById("detail").innerHTML="CSBS DEPARTMENT";
+      }
+      else if(dest=="Entrance"){
+        latlong(9.885688752462528, 78.0794788529645)
+        document.getElementById("detail").innerHTML="TCE ENTRANCE";
+      }
+      else if(darray[0]=="ECE"){
+        latlong(9.882820678202691, 78.0823579355205)
+        document.getElementById("detail").innerHTML="ECE DEPARTMENT"
+      }
+      else if(dest=="CompApp"){
+        latlong(9.882445157866545, 78.08386673513536)
+        document.getElementById("detail").innerHTML="DEPARTMENT OF COMPUTER APPLICATION"
+      }
+      else if(darray[0]=="Chem"){
+        latlong(9.881705575218652, 78.08311475659181)
+        document.getElementById("detail").innerHTML="CHEMISTRY DEPARTMENT"
+      }
+      else if(darray[0]=="Maths"){
+        latlong(9.88189759432116, 78.08315499624699)
+        document.getElementById("detail").innerHTML="MATHEMATICS DEPARTMENT"
+      }
+      else if(darray[0]=="English"){
+        latlong(9.88189759432116, 78.08315499624699)
+        document.getElementById("detail").innerHTML="ENGLISH DEPARTMENT"
+      }
+      else if (darray[0] == "EEE") {
+        latlong(9.882593755301468, 78.08178708984501)
+        document.getElementById("detail").innerHTML="EEE DEPARTMENT"
+      }
+      else if (darray[0] == "MECT") {
+        latlong(9.882083554030897, 78.08312975791166)
+        document.getElementById("detail").innerHTML="MECT DEPARTMENT"
+      }
+      else if (darray[0] == "Physics") {
+        latlong(9.882083554030897, 78.08312975791166)
+        document.getElementById("detail").innerHTML="PHYSICS DEPARTMENT"
+      }
+      else if (darray[0] == "CSE") {
+        latlong(9.88281834867522, 78.08373724696114)
+        document.getElementById("detail").innerHTML="CSE DEPARTMENT"
+      }
+      else if (darray[0] == "Civil") {
+        latlong(9.882296764244305, 78.0828936918579)
+        document.getElementById("detail").innerHTML="CIVIL DEPARTMENT"
+      }
+      else if (dest == "Arch") {
+        latlong(9.880228386351208, 78.08282854700245)
+        document.getElementById("detail").innerHTML="ARCH DEPARTMENT"
+      }
+      else if (darray[0] == "Mech") {
+        latlong(9.882708611969615, 78.0811209551967)
+        document.getElementById("detail").innerHTML="MECH DEPARTMENT"
+      }
+      else if(darray[0]=="Mainbuilding"){
+        latlong(9.882894777636704, 78.08253491726217)
+        document.getElementById("detail").innerHTML="MAIN BUILDING"
+      }
+      else if(dest=="OpenAudi"){
+        latlong(9.882814461436746, 78.08222451807406)
+        document.getElementById("detail").innerHTML="OPEN AUDITORIAM"
+      }
+      else if(dest=="KM"){
+        latlong(9.882814461436746, 78.08222451807406)
+        document.getElementById("detail").innerHTML="KM AUDITORIAM"
+      }
+      else if(dest=="KS"){
+        latlong(9.882889223073565, 78.08212111591777)
+        document.getElementById("detail").innerHTML="KS AUDITORIAM"
+      }
+      else if(dest=="Bank"){
+        latlong(9.883528057671628, 78.07983569816285)
+        document.getElementById("detail").innerHTML="ICICI BANK"
+      }
+      else if (dest == "FC") {
+        latlong(9.883339542220776, 78.08324530594983)
+        document.getElementById("detail").innerHTML="FOOD COURT"
+      }
+      else if (dest == "TCE Stores") {
+        latlong(9.88322862546142, 78.07992536548095)
+        document.getElementById("detail").innerHTML="TCE STORES"
+      }
+      else if (dest == "library") {
+        latlong(9.88303361697175, 78.08133501556914)
+        document.getElementById("detail").innerHTML="LIBRARY"
+      }
+      else if (dest == "NSS cell") {
+        latlong(9.88325557896444, 78.0794936791081)
+        document.getElementById("detail").innerHTML="NSS CELL"
+      }
+      else if (dest == "Main ground") {
+        latlong(9.883922408731436, 78.08157203028395)
+        document.getElementById("detail").innerHTML="MAIN GROUND"
+      }
+      else if (dest == "B Halls") {
+        latlong(9.881952851786568, 78.08277353927916)
+        document.getElementById("detail").innerHTML="B HALLS"
+      }
+      else if (dest == "Boys hostel") {
+        latlong(9.885633979989626, 78.07946651296366)
+        document.getElementById("detail").innerHTML="BOYS HOSTEL"
+      }
+      else if (dest == "Girls hostel") {
+        latlong(9.878946490642353, 78.08263377805396)
+        document.getElementById("detail").innerHTML="GIRLS HOSTEL"
+      }
+      else if(dest=="Placement")
+      {
+        latlong(9.885079408704803, 78.08095350792127)
+        document.getElementById("detail").innerHTML="PLACEMENT CELL"
+      }
+      else if(dest=="xerox")
+      {
+        latlong(9.881355679492097, 78.08327061903425)
+        document.getElementById("detail").innerHTML="STUDENT XEROX"
+      }
+      else if(dest=="PET")
+      {
+        latlong(9.883827944524224, 78.08087289091675)
+        document.getElementById("detail").innerHTML="PHYSICAL EDUCATION DEPARTMENT"
+      }
+      else if(dest=="Indoor"){        
+        latlong(9.877018037022138, 78.08097797770606)
+        document.getElementById("detail").innerHTML="INDOOR STADIUM"
+      }
+      else if(dest=="Cricket"){
+        latlong(9.883927458254524, 78.081414672081)
+        document.getElementById("detail").innerHTML="CRICKET GROUND"
+      }
+      else if(dest=="Basketball"){
+        latlong(9.883514821395508, 78.08237039828191)
+        document.getElementById("detail").innerHTML="BASKETBALL GROUND"
+      }
+      else if(dest=="Tennis"){
+        latlong(9.883510689507405, 78.0823660776185)
+        document.getElementById("detail").innerHTML="TENNIS GROUND"
+      }
+      else if(dest=="Hockey"){
+        latlong(9.878685223309887, 78.08111365869667)
+        document.getElementById("detail").innerHTML="HOCKEY GROUND"
+      }
+      else if(dest=="Handball"){
+        latlong(9.877862541712979, 78.08111365869354)
+        document.getElementById("detail").innerHTML="HANDBALL GROUND"
+      }
+      else if(dest=="Badminton"){
+        latlong(9.877441566328427, 78.08124837218473)
+        document.getElementById("detail").innerHTML="BADMINTON COURT"
+      }
+      else if(dest=="Ballbadminton"){
+        latlong(9.884768531897157, 78.08095800932225)
+        document.getElementById("detail").innerHTML="BALL BADMINTON COURT"
+      }
+      else if(dest=="Volleyball"){
+        latlong(9.885334659161337, 78.0809853829843)
+        document.getElementById("detail").innerHTML="VOLLEYBALL GROUND"
+      }
+      else if(dest=="Kho-Kho"){
+        latlong(9.884717848879443, 78.08125620840333)
+        document.getElementById("detail").innerHTML="KHO-KHO GROUND"
+      }
+      else if(dest=="Football"){
+        latlong(9.883857982195543, 78.08167456159303)
+        document.getElementById("detail").innerHTML="FOOTBALL GROUND"
+      }
+      
+      
+      
+      geocoder
+        .geocode({ location: latlng })
+        .then((response) => {
+          map.setZoom(18);
+
+            const marker = new google.maps.Marker({
+              position: latlng,
+              map: map,
+            });
+
+            infowindow.setContent(response.results[0].formatted_address);
+            infowindow.open(map, marker);
+  
+        })
+        .catch((e) => window.alert("Geocoder failed due to: " + e));
+    }
+  </script>
+  
+  <style>
+    #from-to-align {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #track{
+      
+      padding: 0.8%;
+    font-size:120%;
+    font-variant: small-caps;
+    font-family:georgia;
+
+    }
+    #currloc{
+      padding: 1%;
+      font-size: 100%;
+    }
+
+    #label{
+      font-size:120%;
+    font-variant: small-caps;
+    font-family:georgia;
+    
+    }
+       
+       #it{
+    margin-top: 4%;
+    font-size:200%;
+    font-variant: small-caps;
+    font-family:georgia;
+    }
+    #detail,#startdet,#floor{
+      font-size:130%;
+    font-variant: small-caps;
+    font-family:georgia;
+    }
+    #floor{
+      color: red;
+      font-weight: bold;
+      animation: animate 1s linear infinite;
+    }
+    @keyframes animate {
+      0%{opacity:0.2;}
+      50%{opacity: 1;}
+      100%{opacity:0.2;}
+    }
+    #tceMaps{
+            font-size:170%;}
+  
+    #map {
+      height: 40%;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .buttons{
+            display: contents;
+        }
+    #back,#forward{
+        font-size:25px;
+        border:2px solid;
+        border-radius:12px;
+        padding:10px;
+        text-align: center;
+        background-color:rgb(166, 177, 216);
+        border-color: black;
+        margin-left: 1%;
+        }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #latlng {
+      width: 225px;
+    }
+  </style>
+</html>

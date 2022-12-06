@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TCE Maps</title>
+        <link rel="icon" type="image/png" href="Logo.jpg">
+    </head>
+    <body>
+
+        <div id="back-img" style="background-image: url('https://img.collegepravesh.com/2022/05/TCE-Madurai.jpg'); position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover; opacity: 0.8;">
+        </div>
+        <div id="content" style="position: absolute; top: 0; left:0; width: 100%; height: 100vh; overflow-y: scroll;">
+        
+        <Center>
+        <br><br>
+        <p id="tce">Thiagarajar College of Engineering</p>
+        <a href="Home.html"><img id="logo" src="Logo.jpg" height="100"></a>       
+        <h2 id="tceMaps">TCE MAPS</h2>
+        
+        <form>
+            <input type="text" name="" id="searchdest" placeholder="Search Destination" onkeyup="search()">
+        </form>
+        <br><br><br>
+        </Center>
+
+        <form action="Router.html">
+            <div class="main">
+
+                <div class="left">
+                    <button id="dept" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="IT-" onclick="load(value)">IT Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSE-" onclick="load(value)">CSE Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CompApp" onclick="load(value)">Dept of Computer Appln.</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Mech-" onclick="load(value)">Mech Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="EEE-" onclick="load(value)">EEE Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="ECE-" onclick="load(value)">ECE Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Physics-F" onclick="load(value)">Physics Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="English-S" onclick="load(value)">English Dept</button><br>
+                </div>
+                <div class="right">
+                    
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Civil-" onclick="load(value)">Civil Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="PET" onclick="load(value)">Physical Education Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="CSBS" onclick="load(value)">CSBS Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="MECT-" onclick="load(value)">Mect Dept</button><br>
+                    <button id="dept" class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Maths-S" onclick="load(value)">Maths Dept</button></p>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Chem-G" onclick="load(value)">Chem Dept</button><br>
+                    <button id="dept"  class="dest" onmouseover="design(this)" onmouseout="normal(this)" value="Arch" onclick="load(value)">Arch Dept</button><br>
+                </div>
+            </div>
+        </form>
+        <br><br>
+        <Center>
+            <div class="buttons">
+                <button id="back" onclick="history.back()"><<</button>
+               <button id="forward" onclick="history.forward()">>></button>
+            </div>
+        </Center>
+        <script>
+            function design(x){
+                x.style.background="white";
+            }
+            function normal(x){
+                x.style.background="rgb(166, 177, 216)";
+            }
+            function load(value){
+                localStorage.setItem("loc",value)
+            }
+        </script>
+        <script>
+            function search(){
+            const searchbox=document.getElementById("searchdest").value.toUpperCase();
+            const desti = document.getElementById("destlist");
+            const dname=document.getElementsByClassName("dest");
+            
+            for(var i=0;i<dname.length;i++){
+                let match=dname[i];
+                if(match){
+                    let text = match.textContent || match.innerHTML
+                    if(text.toUpperCase().indexOf(searchbox) > -1){
+                        dname[i].style.display = "";
+                    }else{
+                        dname[i].style.display ="none" ;
+                    }
+                }
+            }
+        }
+
+        
+        </script>
+
+
+    </body>
+    <style>
+     
+    #tce{
+    margin-top: 4%;
+    font-size:200%;
+    font-variant: small-caps;
+    font-family:georgia;
+    background-color: white;
+    width:max-content
+    }
+    #tceMaps{
+            font-size:170%;
+            background-color: white;
+            width:200px;        
+        }
+        body{
+            height: 100%;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .center{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #tceMaps{
+            font-size:170%;
+
+        }
+        .buttons{
+            display: contents;
+        }
+        #searchdest{
+            width:50%;
+            font-size:250%;
+            text-align:center;
+        }
+     
+        
+        #dept{
+        width: 300px;
+        font-size:150%;
+        font-variant: small-caps;
+        font-family:georgia;
+        border:2px solid;
+        border-color: black;
+        background-color:rgb(166, 177, 216);
+        border-radius:12px;
+        padding:10px;
+        margin: 10px;
+        text-align: center;
+        }
+
+        #back,#forward{
+        font-size:25px;
+        border:2px solid;
+        border-radius:12px;
+        padding:10px;
+        text-align: center;
+        background-color:rgb(166, 177, 216);
+        border-color: black;
+        margin-left: 1%;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+
+</html>
